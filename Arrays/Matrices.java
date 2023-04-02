@@ -116,7 +116,7 @@ public class Matrices {
         int row = 0;
         int col = matrix.length - 1;
         boolean found = false;
-        while (row < matrix.length && col >=0 && !found) {
+        while (row < matrix.length && col >= 0 && !found) {
             if (matrix[row][col] == element) {
                 System.out.println("Element found at (" + row + ", " + col + ")");
                 found = true;
