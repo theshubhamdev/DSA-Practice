@@ -112,12 +112,30 @@ public class Matrices {
         System.out.println("Diagonal Sum = " + sum);
     }
 
+    public static void stairCaseSearch(int matrix[][], int element) {
+        int row = 0;
+        int col = matrix.length - 1;
+        boolean found = false;
+        while (row < matrix.length && col >=0 && !found) {
+            if (matrix[row][col] == element) {
+                System.out.println("Element found at (" + row + ", " + col + ")");
+                found = true;
+            } else if (matrix[row][col] > element) {
+                col--;
+            } else {
+                row++;
+            }
+        }
+        if (!found) {
+            System.out.println("Element not found");
+        }
+    }
     public static void main(String[] args) {
-        int matrix[][] = {
-                { 1, 2, 3 },
-                { 4, 5, 6 },
-                { 7, 8, 9 }
-             };
+        // int matrix[][] = {
+        //         { 1, 2, 3 },
+        //         { 4, 5, 6 },
+        //         { 7, 8, 9 }
+        // };
         // int matrix[][] = { { 1, 2, 3, 4}, { 5, 6, 7, 8 } };
         // int matrix[][] = {
         //         { 1, 2, 3, 4 },
@@ -125,6 +143,12 @@ public class Matrices {
         //         { 9, 10, 11, 12 },
         //         { 13, 14, 15, 16 }
         // };
+        int matrix[][] = {
+            { 10, 20, 30, 40 },
+            { 15, 25, 35, 45 },
+            { 27, 29, 37, 48 },
+            { 32, 33, 39, 50 }
+        };
         // int matrix[][] = {
         //     { 1, 1, 1, 1 },
         //     { 5, 1, 1, 1 },
@@ -134,6 +158,7 @@ public class Matrices {
         // findElement(matrix, 10);
         // findMinAndMax(matrix);
         // printSpiral(matrix);
-        diagonalSum(matrix);
+        // diagonalSum(matrix);
+        stairCaseSearch(matrix,33);
     }
 }
