@@ -34,11 +34,19 @@ public class RecursionBasics {
         return n + sumNaturalNum(n - 1);
     }
 
+    public static int findFabonacci(int n) {
+        if (n == 0 || n == 1) {
+            return n;
+        }
+        return findFabonacci(n-1) + findFabonacci(n - 2);
+    }
+
     public static void main(String[] args) {
         int n = 5;
         // printDecreasing(n);
         // printIncreasing(n);
         // System.out.println(factorial(n));
-        System.out.println(sumNaturalNum(n));
+        // System.out.println(sumNaturalNum(n));
+        System.out.println(findFabonacci(n));
     }
 }
