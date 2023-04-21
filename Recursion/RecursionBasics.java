@@ -41,12 +41,25 @@ public class RecursionBasics {
         return findFabonacci(n-1) + findFabonacci(n - 2);
     }
 
+    public static boolean isSorted(int array[], int i) {
+        if (i == (array.length - 1)) {
+            return true;
+        }
+        if (array[i] > array[i + 1]) {
+            return false;
+        }
+        return isSorted(array, i + 1);
+    }
+
     public static void main(String[] args) {
         int n = 5;
+        // int arr[] = { 1, 2, 3, 4, 5 };
+        int arr[] = { 1, 2, 5, 4, 5 };
         // printDecreasing(n);
         // printIncreasing(n);
         // System.out.println(factorial(n));
         // System.out.println(sumNaturalNum(n));
-        System.out.println(findFabonacci(n));
+        // System.out.println(findFabonacci(n));
+        System.out.println(isSorted(arr, 0));
     }
 }
