@@ -78,6 +78,15 @@ public class RecursionBasics {
         return x * xToThePowerN(x, n - 1);
     }
 
+    public static int xToThePowerNOptimized(int x, int n) {
+        if (n == 0) {
+            return 1;
+        }
+        if (n % 2 == 1) {
+            return x * xToThePowerNOptimized(x, n/2) * xToThePowerNOptimized(x, n/2);
+        }
+        return xToThePowerNOptimized(x, n/2) * xToThePowerNOptimized(x, n/2);
+    }
     public static void main(String[] args) {
         int n = 5;
         // int arr[] = { 1, 2, 3, 4, 5 };
@@ -90,6 +99,7 @@ public class RecursionBasics {
         // System.out.println(isSorted(arr, 0));
         // System.out.println(firstOccurence(arr, n, 0));
         // System.out.println(lastOccurence(arr, n, arr.length -1));
-        System.out.println(xToThePowerN(2,10));
+        // System.out.println(xToThePowerN(2,10));
+        System.out.println(xToThePowerNOptimized(2,10));
     }
 }
