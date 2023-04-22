@@ -38,7 +38,7 @@ public class RecursionBasics {
         if (n == 0 || n == 1) {
             return n;
         }
-        return findFabonacci(n-1) + findFabonacci(n - 2);
+        return findFabonacci(n - 1) + findFabonacci(n - 2);
     }
 
     public static boolean isSorted(int array[], int i) {
@@ -51,6 +51,16 @@ public class RecursionBasics {
         return isSorted(array, i + 1);
     }
 
+    public static int firstOccurence(int array[], int num, int i) {
+        if (array.length - 1 == i) {
+            return -1;
+        }
+        if (array[i] == num) {
+            return i;
+        }
+        return firstOccurence(array, num, i + 1);
+    }
+
     public static void main(String[] args) {
         int n = 5;
         // int arr[] = { 1, 2, 3, 4, 5 };
@@ -60,6 +70,7 @@ public class RecursionBasics {
         // System.out.println(factorial(n));
         // System.out.println(sumNaturalNum(n));
         // System.out.println(findFabonacci(n));
-        System.out.println(isSorted(arr, 0));
+        // System.out.println(isSorted(arr, 0));
+        System.out.println(firstOccurence(arr, n, 0));
     }
 }
