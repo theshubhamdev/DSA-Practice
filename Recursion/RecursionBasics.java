@@ -71,6 +71,13 @@ public class RecursionBasics {
         return lastOccurence(array, num, i - 1);
     }
 
+    public static int xToThePowerN(int x, int n) {
+        if (n == 0) {
+            return 1;
+        }
+        return x * xToThePowerN(x, n - 1);
+    }
+
     public static void main(String[] args) {
         int n = 5;
         // int arr[] = { 1, 2, 3, 4, 5 };
@@ -82,6 +89,7 @@ public class RecursionBasics {
         // System.out.println(findFabonacci(n));
         // System.out.println(isSorted(arr, 0));
         // System.out.println(firstOccurence(arr, n, 0));
-        System.out.println(lastOccurence(arr, n, arr.length -1));
+        // System.out.println(lastOccurence(arr, n, arr.length -1));
+        System.out.println(xToThePowerN(2,10));
     }
 }
