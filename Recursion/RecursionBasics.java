@@ -61,6 +61,16 @@ public class RecursionBasics {
         return firstOccurence(array, num, i + 1);
     }
 
+    public static int lastOccurence(int array[], int num, int i) {
+        if (i < 0) {
+            return -1;
+        }
+        if (array[i] == num) {
+            return i;
+        }
+        return lastOccurence(array, num, i - 1);
+    }
+
     public static void main(String[] args) {
         int n = 5;
         // int arr[] = { 1, 2, 3, 4, 5 };
@@ -71,6 +81,7 @@ public class RecursionBasics {
         // System.out.println(sumNaturalNum(n));
         // System.out.println(findFabonacci(n));
         // System.out.println(isSorted(arr, 0));
-        System.out.println(firstOccurence(arr, n, 0));
+        // System.out.println(firstOccurence(arr, n, 0));
+        System.out.println(lastOccurence(arr, n, arr.length -1));
     }
 }
