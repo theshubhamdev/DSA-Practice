@@ -109,6 +109,6 @@ public class RecursionBasics {
         // System.out.println(lastOccurence(arr, n, arr.length -1));
         // System.out.println(xToThePowerN(2,10));
         // System.out.println(xToThePowerNOptimized(2,10));
-        System.out.println(tilingWays(4));
+        System.out.println(tilingWays(n));
     }
 }
