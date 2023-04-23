@@ -83,10 +83,18 @@ public class RecursionBasics {
             return 1;
         }
         if (n % 2 == 1) {
-            return x * xToThePowerNOptimized(x, n/2) * xToThePowerNOptimized(x, n/2);
+            return x * xToThePowerNOptimized(x, n / 2) * xToThePowerNOptimized(x, n / 2);
         }
-        return xToThePowerNOptimized(x, n/2) * xToThePowerNOptimized(x, n/2);
+        return xToThePowerNOptimized(x, n / 2) * xToThePowerNOptimized(x, n / 2);
     }
+    
+    public static int tilingWays(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return tilingWays(n - 1) + tilingWays(n - 2);
+    }
+    
     public static void main(String[] args) {
         int n = 5;
         // int arr[] = { 1, 2, 3, 4, 5 };
@@ -100,6 +108,7 @@ public class RecursionBasics {
         // System.out.println(firstOccurence(arr, n, 0));
         // System.out.println(lastOccurence(arr, n, arr.length -1));
         // System.out.println(xToThePowerN(2,10));
-        System.out.println(xToThePowerNOptimized(2,10));
+        // System.out.println(xToThePowerNOptimized(2,10));
+        System.out.println(tilingWays(4));
     }
 }
