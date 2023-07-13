@@ -94,9 +94,25 @@ public class RecursionBasics {
         }
         return tilingWays(n - 1) + tilingWays(n - 2);
     }
+
+    public static void removeDuplicates(String str, int idx, StringBuilder newStr, boolean map[]) {
+        if (idx == str.length()) {
+            System.out.println(newStr);
+            return;
+        }
+        char currChar = str.charAt(idx);
+        if (map[currChar-'a']) {
+            //duplicate
+            removeDuplicates(str, idx+1, newStr, map);
+        } else {
+            map[currChar-'a'] = true;
+            removeDuplicates(str, idx+1, newStr.append(currChar), map);
+        }
+    }
     
     public static void main(String[] args) {
         int n = 5;
+        String str = "helloworld";
         // int arr[] = { 1, 2, 3, 4, 5 };
         int arr[] = { 1, 2, 5, 4, 5 };
         // printDecreasing(n);
@@ -109,6 +125,7 @@ public class RecursionBasics {
         // System.out.println(lastOccurence(arr, n, arr.length -1));
         // System.out.println(xToThePowerN(2,10));
         // System.out.println(xToThePowerNOptimized(2,10));
-        System.out.println(tilingWays(n));
+        // System.out.println(tilingWays(n));
+        removeDuplicates(str, 0, new StringBuilder(""),new boolean[26]);
     }
 }
