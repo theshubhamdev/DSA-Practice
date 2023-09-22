@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LinkedList",
+            "request": "launch",
+            "mainClass": "LinkedList.LinkedList",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "DoubleTrouble",
+            "request": "launch",
+            "mainClass": "Questions.Beginner.DoubleTrouble",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "MyHouse",
+            "request": "launch",
+            "mainClass": "Questions.Beginner.MyHouse",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "Example",
+            "request": "launch",
+            "mainClass": "ArrayList.Example",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "SmallBig",
+            "request": "launch",
+            "mainClass": "Questions.Beginner.SmallBig",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "addAllBefore",
+            "request": "launch",
+            "mainClass": "Questions.Beginner.addAllBefore",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "Backtracking",
+            "request": "launch",
+            "mainClass": "Backtracking.Backtracking",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "DivideAndConquer",
+            "request": "launch",
+            "mainClass": "DivideAndConquer.DivideAndConquer",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
             "name": "RecursionBasics",
             "request": "launch",
             "mainClass": "Recursion.RecursionBasics",

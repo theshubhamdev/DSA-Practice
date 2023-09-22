@@ -87,7 +87,7 @@ public class RecursionBasics {
         }
         return xToThePowerNOptimized(x, n / 2) * xToThePowerNOptimized(x, n / 2);
     }
-    
+
     public static int tilingWays(int n) {
         if (n == 0 || n == 1) {
             return 1;
@@ -101,15 +101,47 @@ public class RecursionBasics {
             return;
         }
         char currChar = str.charAt(idx);
-        if (map[currChar-'a']) {
-            //duplicate
-            removeDuplicates(str, idx+1, newStr, map);
+        if (map[currChar - 'a']) {
+            // duplicate
+            removeDuplicates(str, idx + 1, newStr, map);
         } else {
-            map[currChar-'a'] = true;
-            removeDuplicates(str, idx+1, newStr.append(currChar), map);
+            map[currChar - 'a'] = true;
+            removeDuplicates(str, idx + 1, newStr.append(currChar), map);
         }
     }
-    
+
+    public static int friendsPairing(int n) {
+        if (n == 1 | n == 2) {
+            return n;
+        }
+        // // Choice
+
+        // // Single
+        // int fnm1 = friendsPairing(n - 1);
+
+        // // Pair
+        // int fnm2 = friendsPairing(n - 2);
+        // int pairWays = (n - 1) * fnm2;
+
+        // // total ways
+        // int totWays = fnm1 + pairWays;
+        // return totWays;
+
+        return friendsPairing(n - 1) * (n - 1) * friendsPairing(n - 2);
+    }
+
+    public static void printBinStrings(int n, int lastPlace, String str) {
+        // base case
+        if (n == 0) {
+            System.out.println(str);
+            return;
+        }
+        printBinStrings(n - 1, 0, str + "0");
+        if (lastPlace == 0) {
+            printBinStrings(n - 1, 1, str + "1");
+        }
+    }
+
     public static void main(String[] args) {
         int n = 5;
         String str = "helloworld";
@@ -126,6 +158,8 @@ public class RecursionBasics {
         // System.out.println(xToThePowerN(2,10));
         // System.out.println(xToThePowerNOptimized(2,10));
         // System.out.println(tilingWays(n));
-        removeDuplicates(str, 0, new StringBuilder(""),new boolean[26]);
+        // removeDuplicates(str, 0, new StringBuilder(""), new boolean[26]);
+        // System.out.println(friendsPairing(3));
+        printBinStrings(3, 0,"");
     }
 }
