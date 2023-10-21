@@ -6,6 +6,118 @@
     "configurations": [
         {
             "type": "java",
+            "name": "firstNonRepeatingCharacter",
+            "request": "launch",
+            "mainClass": "Queues.firstNonRepeatingCharacter",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "StackUsingTwoQueues",
+            "request": "launch",
+            "mainClass": "Queues.StackUsingTwoQueues",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "QueueUsingTwoStacks",
+            "request": "launch",
+            "mainClass": "Queues.QueueUsingTwoStacks",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "QueueUsingJCF",
+            "request": "launch",
+            "mainClass": "Queues.QueueUsingJCF",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "QueueUsingLinkedList",
+            "request": "launch",
+            "mainClass": "Queues.QueueUsingLinkedList",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "CircularQueueWithArrays",
+            "request": "launch",
+            "mainClass": "Queues.CircularQueueWithArrays",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "QueueWithArrays",
+            "request": "launch",
+            "mainClass": "Queues.QueueWithArrays",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "MaxAreaOfRectangleInHistogram",
+            "request": "launch",
+            "mainClass": "Stacks.MaxAreaOfRectangleInHistogram",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "DuplicateParenthesis",
+            "request": "launch",
+            "mainClass": "Stacks.DuplicateParenthesis",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "ValidParenthesis",
+            "request": "launch",
+            "mainClass": "Stacks.ValidParenthesis",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "NextGreaterElement",
+            "request": "launch",
+            "mainClass": "Stacks.NextGreaterElement",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "StockSpan",
+            "request": "launch",
+            "mainClass": "Stacks.StockSpan",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "PushAtBottom",
+            "request": "launch",
+            "mainClass": "Stacks.PushAtBottom",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "StackBase",
+            "request": "launch",
+            "mainClass": "Stacks.StackBase",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "StackLL$Stack",
+            "request": "launch",
+            "mainClass": "Stacks.StackLL$Stack",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
+            "name": "StackA$Stack",
+            "request": "launch",
+            "mainClass": "Stacks.StackA$Stack",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
             "name": "LinkedList",
             "request": "launch",
             "mainClass": "LinkedList.LinkedList",
