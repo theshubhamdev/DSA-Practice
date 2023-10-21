@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Interleave2HalvesOfAQueue",
+            "request": "launch",
+            "mainClass": "Queues.Interleave2HalvesOfAQueue",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
             "name": "firstNonRepeatingCharacter",
             "request": "launch",
             "mainClass": "Queues.firstNonRepeatingCharacter",
