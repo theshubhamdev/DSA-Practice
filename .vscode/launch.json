@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ActivitySelection",
+            "request": "launch",
+            "mainClass": "GreedyAlgorithms.ActivitySelection",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
             "name": "StackAndQueueUsingDeque",
             "request": "launch",
             "mainClass": "Queues.StackAndQueueUsingDeque",
