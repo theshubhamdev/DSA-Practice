@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "QueueReverse",
+            "request": "launch",
+            "mainClass": "Queues.QueueReverse",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
             "name": "Interleave2HalvesOfAQueue",
             "request": "launch",
             "mainClass": "Queues.Interleave2HalvesOfAQueue",
