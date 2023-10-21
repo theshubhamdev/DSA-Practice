@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DequeExample",
+            "request": "launch",
+            "mainClass": "Queues.DequeExample",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
             "name": "QueueReverse",
             "request": "launch",
             "mainClass": "Queues.QueueReverse",
