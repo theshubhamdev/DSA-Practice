@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "IndianCoins",
+            "request": "launch",
+            "mainClass": "GreedyAlgorithms.IndianCoins",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
             "name": "MaxLengthChainOfPairs",
             "request": "launch",
             "mainClass": "GreedyAlgorithms.MaxLengthChainOfPairs",
