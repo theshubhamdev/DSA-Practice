@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MaxLengthChainOfPairs",
+            "request": "launch",
+            "mainClass": "GreedyAlgorithms.MaxLengthChainOfPairs",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
             "name": "MinAbsoluteDifferencePairs",
             "request": "launch",
             "mainClass": "GreedyAlgorithms.MinAbsoluteDifferencePairs",
