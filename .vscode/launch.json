@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Chocola",
+            "request": "launch",
+            "mainClass": "GreedyAlgorithms.Chocola",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
             "name": "JobSequencing",
             "request": "launch",
             "mainClass": "GreedyAlgorithms.JobSequencing",
