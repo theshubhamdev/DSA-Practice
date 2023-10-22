@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MinAbsoluteDifferencePairs",
+            "request": "launch",
+            "mainClass": "GreedyAlgorithms.MinAbsoluteDifferencePairs",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
             "name": "FractionalKnapsack",
             "request": "launch",
             "mainClass": "GreedyAlgorithms.FractionalKnapsack",
