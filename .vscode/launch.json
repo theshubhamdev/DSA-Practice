@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BaseBinaryTreeBuilding",
+            "request": "launch",
+            "mainClass": "BinaryTree.BaseBinaryTreeBuilding",
+            "projectName": "JavaProgramming_aece8870"
+        },
+        {
+            "type": "java",
             "name": "Chocola",
             "request": "launch",
             "mainClass": "GreedyAlgorithms.Chocola",
