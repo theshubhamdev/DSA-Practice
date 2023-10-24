@@ -112,8 +112,9 @@ public class BaseBinaryTreeBuilding {
             int leftHeight = maxHeightOfTree(root.left);
             int rightHeight = maxHeightOfTree(root.right);
             int selfDiameter = leftHeight + rightHeight + 1;
-            return Math.max(leftDiameter, Math.max(rightDiameter, selfDiameter) );
+            return Math.max(leftDiameter, Math.max(rightDiameter, selfDiameter));
         }
+
         public static int sumOfNodes(Node root) {
             if (root == null) {
                 return 0;
@@ -122,6 +123,31 @@ public class BaseBinaryTreeBuilding {
             int rightSum = sumOfNodes(root.right);
             return leftSum + rightSum + root.data;
         }
+
+        static class Info {
+            int height;
+            int diameter;
+
+            public Info(int h, int d) {
+                this.height = h;
+                this.diameter = d;
+            }
+        }
+
+        public static Info calculateDiameter2(Node root) {
+            if (root == null) {
+                return new Info(0, 0);
+            }
+            Info leftDiameter = calculateDiameter2(root.left);
+            Info rightDiameter = calculateDiameter2(root.right);
+
+            int diameter = Math.max(Math.max(leftDiameter.diameter, rightDiameter.diameter),
+                    leftDiameter.height + rightDiameter.height + 1);
+            int height = Math.max(leftDiameter.height, rightDiameter.height) + 1;
+
+            return new Info(height, diameter);
+        }
+    
     }
 
     public static void main(String[] args) {
@@ -136,6 +162,7 @@ public class BaseBinaryTreeBuilding {
         // System.out.println(tree.maxHeightOfTree(root));
         // System.out.println(tree.countNodes(root));
         // System.out.println(tree.sumOfNodes(root));
-        System.out.println(tree.calculateDiameter(root));
+        // System.out.println(tree.calculateDiameter(root));
+        System.out.println(tree.calculateDiameter2(root).diameter);
     }
 }
