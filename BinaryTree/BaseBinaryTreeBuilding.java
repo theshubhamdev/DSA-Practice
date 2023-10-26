@@ -1,7 +1,6 @@
 package BinaryTree;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class BaseBinaryTreeBuilding {
     static class Node {
@@ -148,12 +147,89 @@ public class BaseBinaryTreeBuilding {
             return new Info(height, diameter);
         }
     
+        public static boolean isIdentical(Node root, Node subRoot) {
+            if (root == null && subRoot == null) {
+                return true;
+            } else if (root == null || subRoot == null || root.data != subRoot.data) {
+                return false;
+            }
+
+            if (!(isIdentical(root.left, subRoot.left))) {
+                return false;
+            }
+            if (!(isIdentical(root.right, subRoot.right))) {
+                return false;
+            }
+            return true;
+        }
+        
+        public static boolean isSubTree(Node root, Node subRoot) {
+            if (root == null) {
+                return false;
+            }
+            if (root.data == subRoot.data) {
+                if (isIdentical(root, subRoot)) {
+                    return true;
+                }
+            }
+            return isSubTree(root.left, subRoot) || isSubTree(root.right, subRoot);
+        }
+    
+        static class Info2 {
+            Node node;
+            int hd; //Horizontal Distance
+
+            public Info2(Node node, int hd) {
+                this.node = node;
+                this.hd = hd;
+            }
+        }
+        public static void topView(Node root) {
+            // Level Order Traverse
+            Queue<Info2> q = new LinkedList<>();
+            HashMap<Integer, Node> map = new HashMap<>();
+            int max = 0, min = 0;
+            q.add(new Info2(root, 0));
+            q.add(null);
+            while (!q.isEmpty()) {
+                Info2 curr = q.remove();
+                if (curr == null) {
+                    if (q.isEmpty()) {
+                        break;
+                    } else {
+                        q.add(null);
+                    }
+                } else {
+                    if (!map.containsKey(curr.hd)) {
+                        // first time occurrence of HD
+                        map.put(curr.hd, curr.node);
+                    }
+                    if (curr.node.left != null) {
+                        q.add(new Info2(curr.node.left, curr.hd - 1));
+                        min = Math.min(min, curr.hd - 1);
+                    }
+                    if (curr.node.right != null) {
+                        q.add(new Info2(curr.node.right, curr.hd + 1));
+                        max = Math.max(max, curr.hd + 1);
+                    }
+                }
+            }
+            for (int i = min; i <= max; i++) {
+                System.out.print(map.get(i).data + " ");
+            }
+            System.out.println();
+        }
     }
 
     public static void main(String[] args) {
-        int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
+        int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 7, -1, -1 };
+        // Root
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(nodes);
+        // Sub Root
+        Node subRoot = new Node(2);
+        subRoot.left = new Node(4);
+        subRoot.right = new Node(5);
         // System.out.println(root.data);
         // tree.preorderPrint(root);
         // tree.inorderPrint(root);
@@ -163,6 +239,9 @@ public class BaseBinaryTreeBuilding {
         // System.out.println(tree.countNodes(root));
         // System.out.println(tree.sumOfNodes(root));
         // System.out.println(tree.calculateDiameter(root));
-        System.out.println(tree.calculateDiameter2(root).diameter);
+        // System.out.println(tree.calculateDiameter2(root).diameter);
+        // System.out.println(tree.isSubTree(root, subRoot));
+        // System.out.println();
+        tree.topView(root);
     }
 }
