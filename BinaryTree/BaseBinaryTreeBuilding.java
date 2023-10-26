@@ -146,7 +146,7 @@ public class BaseBinaryTreeBuilding {
 
             return new Info(height, diameter);
         }
-    
+
         public static boolean isIdentical(Node root, Node subRoot) {
             if (root == null && subRoot == null) {
                 return true;
@@ -162,7 +162,7 @@ public class BaseBinaryTreeBuilding {
             }
             return true;
         }
-        
+
         public static boolean isSubTree(Node root, Node subRoot) {
             if (root == null) {
                 return false;
@@ -174,16 +174,17 @@ public class BaseBinaryTreeBuilding {
             }
             return isSubTree(root.left, subRoot) || isSubTree(root.right, subRoot);
         }
-    
+
         static class Info2 {
             Node node;
-            int hd; //Horizontal Distance
+            int hd; // Horizontal Distance
 
             public Info2(Node node, int hd) {
                 this.node = node;
                 this.hd = hd;
             }
         }
+
         public static void topView(Node root) {
             // Level Order Traverse
             Queue<Info2> q = new LinkedList<>();
@@ -219,10 +220,22 @@ public class BaseBinaryTreeBuilding {
             }
             System.out.println();
         }
+
+        public static void KLevel(Node root, int level, int k) {
+            if (root == null) {
+                return;
+            }
+            if (level == k) {
+                System.out.print(root.data + " ");
+                return;
+            }
+            KLevel(root.left, level + 1, k);
+            KLevel(root.right, level + 1, k);
+        }
     }
 
     public static void main(String[] args) {
-        int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 7, -1, -1 };
+        int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, 6, -1, -1, 7, -1, -1 };
         // Root
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(nodes);
@@ -242,6 +255,7 @@ public class BaseBinaryTreeBuilding {
         // System.out.println(tree.calculateDiameter2(root).diameter);
         // System.out.println(tree.isSubTree(root, subRoot));
         // System.out.println();
-        tree.topView(root);
+        // tree.topView(root);
+        tree.KLevel(root, 1, 3);
     }
 }
